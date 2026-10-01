@@ -1,0 +1,6 @@
+[project]
+name = "replace-with-agent-name"
+version = "0.0.0"
+requires-python = ">=3.12"
+# Nach erster gepruefter Core-Veroeffentlichung feste Abhaengigkeit ergaenzen.
+dependencies = []

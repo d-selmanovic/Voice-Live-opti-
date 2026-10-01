@@ -1,0 +1,23 @@
+{
+  "agent_id": "example-only",
+  "organization_id": "configure-server-side",
+  "languages": [
+    "de",
+    "bs",
+    "en"
+  ],
+  "smalltalk": {
+    "enabled": true,
+    "return_to_task": "friendly",
+    "strategy": "ongoing_monitoring"
+  },
+  "tools": {
+    "allowlist": []
+  },
+  "memory": {
+    "enabled": false
+  },
+  "knowledge": {
+    "enabled": false
+  }
+}
