@@ -13,4 +13,4 @@
 | prompts | kurze gemeinsame Gesprächsbausteine | technische Zugriffssperren |
 | observability | IDs, Zeiten und technische Ergebnisse | ungeprüfte private Volltranskripte |
 
-Module sind Verantwortlichkeiten, keine separaten Server. Laufzeitcode wird in der nächsten Funktionsphase entwickelt.
+Module sind Verantwortlichkeiten, keine separaten Server. Die Referenzdemo ist zunächst gekapselt in browser_demo/ übernommen; diese Kunden-Core-Zuständigkeiten sind weiterhin geplant.

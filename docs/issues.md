@@ -12,9 +12,9 @@ Abschlusskriterium: Konsistenz, negative Prüffälle, Git und Download nachgewie
 
 ## ISS-002: Aktuellen Referenzstand und Browsermigration prüfen
 
-Priorität: wichtig. Status: **offen**. Anforderungen: REQ-002,REQ-009.
+Priorität: wichtig. Status: **in Arbeit**. Anforderungen: REQ-002,REQ-009.
 
-Nächster Schritt / Blockade: Ist-Ablauf und Abhängigkeiten gegen Repository prüfen.
+Nächster Schritt / Blockade: Migration und 15 technische Tests abgeschlossen; jetzt echter Mac-Browser-/Audiotest.
 
 Abschlusskriterium: Browserbasis reproduzierbar gestartet und Verhalten getestet. Nachweis: noch offen.
 

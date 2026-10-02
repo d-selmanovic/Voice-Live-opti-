@@ -1,3 +1,5 @@
-# Browser-Demo
+# Browser-Demo — migriert
 
-Hier entsteht die Testanwendung mit Frontend und Backend. Die vorhandene Demo ist nicht hierher verschoben. Zuerst Migration planen und Audiopfad pruefen.
+Frontend: frontend/public/. Backend-Einstieg: backend/server.py; Implementierung: src/activi_agent/browser_demo/ im Projektroot.
+
+[Startanleitung](../../docs/runbooks/local-start.md). Bisherige WebRTC-, Responses-, Ticket- und Bewertungsfunktionen übernommen. Keine Render-Veröffentlichung.
