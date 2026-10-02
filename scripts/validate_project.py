@@ -34,12 +34,12 @@ for row in audit:
     covered.update(row['requirements'])
 check(covered == rids, 'requirements not fully mapped')
 for path in root.rglob('*.json'):
-    if '.git' not in path.parts:
+    if not set(path.parts) & {'.git', '.venv', 'private-data', '__pycache__', 'build', 'dist'}:
         json.loads(path.read_text())
 tomllib.loads((root / 'pyproject.toml').read_text())
 links = 0
 for path in root.rglob('*.md'):
-    if '.git' in path.parts:
+    if set(path.parts) & {'.git', '.venv', 'private-data', '__pycache__', 'build', 'dist'}:
         continue
     content = re.sub(r'```.*?```', '', path.read_text(), flags=re.S)
     for link in re.findall(r'\[[^\]]*\]\(([^)]+)\)', content):

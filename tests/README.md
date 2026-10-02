@@ -1,3 +1,5 @@
-# Technische Prüfungen
+# Tests
 
-Aktuell führt scripts/validate_project.py eine strukturelle Prüfung aus. Laufzeitcode ist noch nicht implementiert; daher keine behauptete Unit-/Integration-/Vertragsabdeckung. Tests zusammen mit realen Funktionen ergänzen: Rechte, Einmaligkeit, Revision, Ausfälle und Datentrennung. Voice-Evaluation ist separat in evals/.
+15 unittest-Fälle für migrierte Demo: Host/Origin/Login, private Dateien, statische Ressourcen, fehlender Key, Ticketbestätigung/Revision/Einmaligkeit und Bewertungen. Upstream wird gemockt, kein Sprachqualitätsnachweis.
+
+[Start und Prüfbefehle](../docs/runbooks/local-start.md).

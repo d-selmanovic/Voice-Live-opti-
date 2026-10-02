@@ -2,7 +2,9 @@
 
 Wiederverwendbare Voice-Agentenbasis von Denis Selmanovic / activi.io.
 
-Status: Projektorganisation und Quellenabgleich optimiert. Gemeinsame Voice-/Memory-/Tool-Funktionen sind noch nicht implementiert; die bestehende Demo wurde nicht migriert oder veröffentlicht.
+Status: Browser-Demo migriert (0.1.0), lokal startbar. 15 Tests und localhost-HTTP bestanden. Echtes Sprachgespräch/Mac-Abnahme offen. Kunden-Core, Memory und Integrationen bleiben geplant. Kein Render-Deploy.
+
+[Auf deinem Mac starten](docs/runbooks/local-start.md).
 
 Einstieg: [AGENTS.md](AGENTS.md), [Status](docs/status.md), [Struktur](docs/structure.md), [Anforderungen](docs/requirements.md), [Aufgaben](docs/issues.md).
 

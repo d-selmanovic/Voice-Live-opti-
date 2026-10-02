@@ -4,9 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "activi-agent-core"
-version = "0.0.0"
-description = "Grundgeruest fuer die Activi Voice-Agentenbasis"
+version = "0.1.0"
+description = "Activi Voice-Agentenbasis mit migrierter Browser-Demo"
 requires-python = ">=3.12"
+
+dependencies = ["aiohttp>=3.13.5,<4", "psycopg[binary]>=3.2,<4"]
+
+[project.scripts]
+activi-voice = "activi_agent.browser_demo.server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

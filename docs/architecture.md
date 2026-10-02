@@ -2,6 +2,8 @@
 
 Ist: lokale Referenz voice-agent, Commit fba6401a0019fa70024f85d63ff08e51131a53fc. Browser trägt Audio per WebRTC, der Server erstellt GPT-Live-Sessions und hängt sich per Sideband an. Responses-Delegation ist konfiguriert, Tools werden serverseitig verarbeitet. Dieser Befund ist statisch, kein Live-Test.
 
+Ist im neuen Checkout: Referenzdemo nach src/activi_agent/browser_demo/ und apps/browser-demo/frontend/public/ übertragen; Pfade, relative Imports und lokaler Start angepasst. API-Vertrag und Audiofluss beibehalten. Websuche nach Prüfung als Funktion der allgemeinen Demo übernommen, keine Kundenfreigabe.
+
 Ziel: gleiche klare Trennung als modularer Core. Ein Server zuerst, zusätzliche Dienste nur bei Bedarf. Responses-Delegation als Ausgangspunkt prüfen; Client Delegation erst für eigene Workflows/Ergebnisprüfung entscheiden. Keine pauschale Umstellung nötig.
 
 [System](architecture/diagrams/system.md), [Audio](architecture/diagrams/audio-flow.md), [Tools](architecture/diagrams/tool-flow.md), [Datentrennung](architecture/diagrams/data-isolation.md), [Datenmodell](architecture/data-model.md), [Module](architecture/module-map.md).

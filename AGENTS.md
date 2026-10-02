@@ -1,7 +1,7 @@
 # Activi Agent Core – Arbeitsanweisungen
 
 ## Ziel und aktueller Stand
-Wiederverwendbare technische Basis für kundenindividuelle Voice-Agenten von Denis Selmanovic / activi.io. Aktuell: Struktur, dokumentierte Entscheidungen und Offline-Prüfungen; noch kein migrierter Voice-Agent. Bestehende Render-Demo ist separate Referenz.
+Wiederverwendbare technische Basis für kundenindividuelle Voice-Agenten von Denis Selmanovic / activi.io. Aktuell: Struktur und migrierte Browser-Demo 0.1.0; lokale technische Tests bestanden, echte Sprachabnahme offen. Bestehende Render-Demo ist separate Referenz.
 
 ## Einstieg und Pflichtlektüre
 Vor Arbeit [Status](docs/status.md), [Anforderungen](docs/requirements.md), [Tracker](docs/issues.md) und [Entwicklungsregeln](docs/development/rules.md) lesen. Relevante Architektur, Guides und Quellen gezielt hinzunehmen. [Strukturübersicht](docs/structure.md) ordnet alle Bereiche zu.
@@ -29,4 +29,4 @@ Bei wesentlichen Unklarheiten eigene zugängliche Quellen zuerst prüfen, dann g
 - `PYTHONPATH=src python3 -c 'import activi_agent; print(activi_agent.__version__)'` — nur Paketimport.
 - `git diff --check` — Formatfehler im Diff.
 
-Ein Voice-Startbefehl existiert noch nicht. Bereichsanweisungen: Backend, Frontend und evals besitzen eigene AGENTS.md; bei Änderungen dort ausdrücklich lesen. [Definition of done](docs/development/definition-of-done.md) beachten. Aktuelle API-Dokumentation vor Implementierung prüfen, archivierte Beispiele nicht als aktuelle API übernehmen.
+Lokaler Start nach docs/runbooks/local-start.md; Tests mit .venv/bin/python -m unittest discover -s tests -v. Bereichsanweisungen: Backend, Frontend und evals besitzen eigene AGENTS.md; bei Änderungen dort ausdrücklich lesen. [Definition of done](docs/development/definition-of-done.md) beachten. Aktuelle API-Dokumentation vor Implementierung prüfen, archivierte Beispiele nicht als aktuelle API übernehmen.
