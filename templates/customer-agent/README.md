@@ -1,3 +1,5 @@
-# Startvorlage fuer einen Spezialagenten
+# Kundenprojekt-Vorlage
 
-In ein neues Kundenrepository uebernehmen. Konfiguration, Prompts und eigene Erweiterungen anpassen. Zuerst getestete Core-Version freigeben: Version 0.0.0 ist nur das Grundgeruest, kein lauffaehiger Agent. Keine echten Zugangsdaten oder Kundeninformationen einchecken.
+Technisches Grundgerüst, noch kein lauffähiger Agent. Kopieren und eigene Konfiguration, Prompts sowie Freigaben bestimmen. Der Core ist 0.0.0 und nicht veröffentlicht; deshalb keine Paketabhängigkeit vorgaukeln. Firmen-/Kundenidentitäten serverseitig bestätigen.
+
+[Projektregeln](AGENTS.md) und [Konfiguration](config/agent.example.json) lesen. Eigene Aufgaben/Status führen. Bei erster Core-Veröffentlichung feste geprüfte Abhängigkeit ergänzen und zweites Profil testen.

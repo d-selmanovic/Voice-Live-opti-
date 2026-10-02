@@ -1,3 +1,3 @@
 # Deployment
 
-Konfiguration folgt nach funktionsfaehiger Browser-Basis. Keine Cloud-Ressourcen oder Render-Startbefehle angelegt.
+Kein neuer Dienst eingerichtet. Vor Runtime-Veröffentlichung docs/runbooks/deploy.md und docs/development/releases.md abarbeiten. Erst Browserabnahme, Hosting-/Datenentscheidung und Staging; vorhandene Render-Demo unverändert.

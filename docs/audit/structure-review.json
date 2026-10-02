@@ -1,0 +1,733 @@
+{
+  "review_date": "2026-10-02",
+  "scope": "Struktur, Unterlagen, Regeln und statischer Referenzcode; keine Live- oder Sprachtests",
+  "items": [
+    {
+      "id": "A01",
+      "area": "Zentrale AGENTS.md",
+      "requirements": [
+        "REQ-012",
+        "REQ-016"
+      ],
+      "sources": [
+        "S01"
+      ],
+      "evidence_kind": "direkt",
+      "decision": "jetzt",
+      "reason": "Kompakter Einstieg und explizite Lesepflichten.",
+      "alternative": "Alle Details in einer langen Datei erzeugen Kontextlast.",
+      "target": "AGENTS.md",
+      "practical_proof_needed": "Anweisungsentdeckung im konkreten Mac/Codex-Setup später prüfen."
+    },
+    {
+      "id": "A02",
+      "area": "Bereichs-AGENTS.md",
+      "requirements": [
+        "REQ-012"
+      ],
+      "sources": [
+        "S01"
+      ],
+      "evidence_kind": "direkt",
+      "decision": "jetzt",
+      "reason": "Nur Frontend, Backend und Evals brauchen eigene Regeln.",
+      "alternative": "Eine Datei je Ordner wäre redundant.",
+      "target": "apps/browser-demo/backend/AGENTS.md",
+      "practical_proof_needed": "Bereichsregeln auf Widersprüche prüfen."
+    },
+    {
+      "id": "A03",
+      "area": "Ziel und Umfang",
+      "requirements": [
+        "REQ-001",
+        "REQ-012"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Erste Basis und späterer visueller Builder ausdrücklich trennen.",
+      "alternative": "Name Voice Builder allein legt keine UI fest.",
+      "target": "docs/project/vision.md",
+      "practical_proof_needed": "Umfang mit späteren Entwicklungsaufträgen abgleichen."
+    },
+    {
+      "id": "A04",
+      "area": "Anforderungen",
+      "requirements": [
+        "REQ-012",
+        "REQ-016"
+      ],
+      "sources": [
+        "S05"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "IDs mit Abnahmekriterium verbinden Audit und Aufgaben.",
+      "alternative": "Lose Chat-Aussagen sind kein prüfbarer Projektstand.",
+      "target": "docs/requirements.md",
+      "practical_proof_needed": "Verknüpfung validieren; Laufzeitabnahmen noch offen."
+    },
+    {
+      "id": "A05",
+      "area": "Status",
+      "requirements": [
+        "REQ-012",
+        "REQ-016"
+      ],
+      "sources": [
+        "S02"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Aktuellen Stand und Evidenz getrennt führen.",
+      "alternative": "Roadmap allein enthält keine Nachweise.",
+      "target": "docs/status.md",
+      "practical_proof_needed": "Nach jeder wesentlichen Arbeit aktualisieren."
+    },
+    {
+      "id": "A06",
+      "area": "Offene Fragen",
+      "requirements": [
+        "REQ-014",
+        "REQ-016"
+      ],
+      "sources": [],
+      "evidence_kind": "Nutzeranforderung",
+      "decision": "jetzt",
+      "reason": "Engine-ID, Parallelität und Qualitätsziel nicht erfinden.",
+      "alternative": "Alle Entwicklung wegen späterer Telefonie blockieren.",
+      "target": "docs/project/open-questions.md",
+      "practical_proof_needed": "Vor jeweils abhängigen Phasen klären."
+    },
+    {
+      "id": "A07",
+      "area": "Regeln und Fertigkriterien",
+      "requirements": [
+        "REQ-012",
+        "REQ-016"
+      ],
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Entwicklungsregeln und Laufzeitregeln unterscheiden.",
+      "alternative": "Alles als Voice-Prompt formulieren wäre falsch.",
+      "target": "docs/development/rules.md",
+      "practical_proof_needed": "Befehle und Definition-of-done tatsächlich prüfen."
+    },
+    {
+      "id": "A08",
+      "area": "Roadmap",
+      "requirements": [
+        "REQ-002",
+        "REQ-012"
+      ],
+      "sources": [
+        "S02"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Phasen und Übergangskriterien darstellen.",
+      "alternative": "Roadmap als konkurrierende To-do-Liste.",
+      "target": "docs/roadmap.md",
+      "practical_proof_needed": "Jede Phase hat beobachtbare Abnahme."
+    },
+    {
+      "id": "A09",
+      "area": "Backlog/Issues/To-dos",
+      "requirements": [
+        "REQ-012"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "angepasst",
+      "reason": "Ein lokaler Tracker ist führend; später GitHub übernehmen.",
+      "alternative": "Zusätzlicher planning/backlog.md würde doppelte Pflege erzeugen.",
+      "target": "docs/issues.md",
+      "practical_proof_needed": "Stabile IDs, Status, nächste Schritte und Nachweis prüfen."
+    },
+    {
+      "id": "A10",
+      "area": "Ausführungspläne",
+      "requirements": [
+        "REQ-012"
+      ],
+      "sources": [
+        "S02"
+      ],
+      "evidence_kind": "direkt",
+      "decision": "jetzt",
+      "reason": "Für Migration und große Änderungen, nicht jede Kleinkorrektur.",
+      "alternative": "Eine Checkliste ohne Kontext und Rücknahmeplan reicht nicht.",
+      "target": "PLANS.md",
+      "practical_proof_needed": "Aktuellen Plan bis Ergebnis und Erkenntnissen pflegen."
+    },
+    {
+      "id": "A11",
+      "area": "GitHub Vorlagen",
+      "requirements": [
+        "REQ-012"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "evidence_kind": "direkt",
+      "decision": "jetzt",
+      "reason": "Lokale Issue- und PR-Vorlagen vorbereiten.",
+      "alternative": "GitHub-Projekt jetzt ungefragt erzeugen.",
+      "target": ".github/ISSUE_TEMPLATE/bug.md",
+      "practical_proof_needed": "Nutzung nach neuer Repository-Veröffentlichung prüfen."
+    },
+    {
+      "id": "A12",
+      "area": "Automatische Prüfungen",
+      "requirements": [
+        "REQ-012",
+        "REQ-016"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Offline-Projektintegrität in lokalem Skript und CI-Beschreibung.",
+      "alternative": "Grüne CI als bestandene Voice-Evaluation ausgeben.",
+      "target": ".github/workflows/project-checks.yml",
+      "practical_proof_needed": "Workflow lokal parsen; GitHub-Ausführung erst nach Push nachweisen."
+    },
+    {
+      "id": "A13",
+      "area": "Architektur und Modulkarte",
+      "requirements": [
+        "REQ-001",
+        "REQ-009"
+      ],
+      "sources": [
+        "S03",
+        "S04"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Ist-Referenz und geplanten Core getrennt beschreiben.",
+      "alternative": "Ein Zielbild als bereits laufende Architektur zeichnen.",
+      "target": "docs/architecture.md",
+      "practical_proof_needed": "Codefluss statisch prüfen; End-to-End-Messung später."
+    },
+    {
+      "id": "A14",
+      "area": "Architekturentscheidungen",
+      "requirements": [
+        "REQ-012"
+      ],
+      "sources": [
+        "S02"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Kontext, Alternativen, Nachteile und Neubewertung erfassen.",
+      "alternative": "Entscheidungen bei jedem Chat neu treffen.",
+      "target": "docs/decisions/0002-organization.md",
+      "practical_proof_needed": "Jede wesentliche Änderung auf neue Erkenntnisse zurückführen."
+    },
+    {
+      "id": "A15",
+      "area": "Systemzeichnung",
+      "requirements": [
+        "REQ-009",
+        "REQ-012"
+      ],
+      "sources": [
+        "S03",
+        "S04"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "System mit Audio- und Steuerverbindungen zeigen.",
+      "alternative": "Diagramm ohne Statuskennzeichnung.",
+      "target": "docs/architecture/diagrams/system.md",
+      "practical_proof_needed": "Mit Referenzcode vergleichen; keine Live-Verifikation behaupten."
+    },
+    {
+      "id": "A16",
+      "area": "Audiozeichnung",
+      "requirements": [
+        "REQ-009"
+      ],
+      "sources": [
+        "S04",
+        "S14"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Audiowiedergabe ist nicht gleich erzeugtes Transkript.",
+      "alternative": "Sideband als Audio-Vorabkontrolle darstellen.",
+      "target": "docs/architecture/diagrams/audio-flow.md",
+      "practical_proof_needed": "Hörbare Antwortzeiten und Unterbrechungen später messen."
+    },
+    {
+      "id": "A17",
+      "area": "Tool-Zeichnung",
+      "requirements": [
+        "REQ-007",
+        "REQ-008"
+      ],
+      "sources": [
+        "S04",
+        "S07",
+        "S16"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Autorisierung, Revision und eindeutigen Executor abbilden.",
+      "alternative": "Nur Prompt-Regeln einsetzen.",
+      "target": "docs/architecture/diagrams/tool-flow.md",
+      "practical_proof_needed": "Doppelte, unzulässige und verspätete Aufrufe praktisch testen."
+    },
+    {
+      "id": "A18",
+      "area": "Datentrennung und Datenmodell",
+      "requirements": [
+        "REQ-004",
+        "REQ-014"
+      ],
+      "sources": [
+        "S06"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Eigene firmenspezifische Server-Zuordnung vorschlagen.",
+      "alternative": "Repositories als Zugriffsschutz behandeln.",
+      "target": "docs/architecture/data-model.md",
+      "practical_proof_needed": "Angriffe auf fremde Kunden-/Firmendaten testen."
+    },
+    {
+      "id": "A19",
+      "area": "Guides",
+      "requirements": [
+        "REQ-001",
+        "REQ-012"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Konkrete Arbeitsabläufe und gegenwärtige Grenzen dokumentieren.",
+      "alternative": "Tutorials mit nicht existierenden Befehlen liefern.",
+      "target": "docs/guides/new-agent.md",
+      "practical_proof_needed": "Zweites Projekt nach Anleitung später tatsächlich erzeugen."
+    },
+    {
+      "id": "A20",
+      "area": "Quellenregister",
+      "requirements": [
+        "REQ-016"
+      ],
+      "sources": [
+        "S01"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Quelle, Datum, Aussage und Grenze je Entscheidung.",
+      "alternative": "Alle Ordner als offiziell vorgeschrieben ausgeben.",
+      "target": "docs/sources.md",
+      "practical_proof_needed": "Quellen beim nächsten Implementierungsschritt erneut auf Aktualität prüfen."
+    },
+    {
+      "id": "A21",
+      "area": "Runbooks",
+      "requirements": [
+        "REQ-013"
+      ],
+      "sources": [
+        "S09"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "angepasst",
+      "reason": "Praktische lokale Prüfungen jetzt; Deployment-Gates offen kennzeichnen.",
+      "alternative": "Ungetestete Cloud-Befehle als fertiges Runbook liefern.",
+      "target": "docs/runbooks/local-start.md",
+      "practical_proof_needed": "Lokale Anleitung ausführen; Cloud/Restore erst nach Implementierung."
+    },
+    {
+      "id": "A22",
+      "area": "Security und Datenhaltung",
+      "requirements": [
+        "REQ-004",
+        "REQ-015"
+      ],
+      "sources": [
+        "S07",
+        "S09"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Datenminimierung und Zugriff an konkreten Grenzen dokumentieren.",
+      "alternative": "Allgemeine Checkliste ohne Implementierungsbezug.",
+      "target": "docs/security/access-control.md",
+      "practical_proof_needed": "Isolation, Löschung und Logs in Pilotumgebung testen."
+    },
+    {
+      "id": "A23",
+      "area": "Sprachbewertung",
+      "requirements": [
+        "REQ-011"
+      ],
+      "sources": [
+        "S05"
+      ],
+      "evidence_kind": "direkt",
+      "decision": "jetzt",
+      "reason": "Evals von technischen Unit-Tests trennen.",
+      "alternative": "13 Python-Tests als Sprachqualitätsnachweis.",
+      "target": "docs/evaluation/strategy.md",
+      "practical_proof_needed": "DE/BS/EN, Unterbrechung und Toolfehler evaluieren."
+    },
+    {
+      "id": "A24",
+      "area": "80-Prozent-Ziel",
+      "requirements": [
+        "REQ-011",
+        "REQ-016"
+      ],
+      "sources": [
+        "S05"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "angepasst",
+      "reason": "Bedeutung und Datensatz offen; frühere Jeff-Anforderung nicht pauschal übertragen.",
+      "alternative": "Eine frei erfundene Gesamtmetrik festschreiben.",
+      "target": "docs/evaluation/release-criteria.md",
+      "practical_proof_needed": "Mit Nutzer Kategorien, Samplegröße und Schwellen festlegen."
+    },
+    {
+      "id": "A25",
+      "area": "Technische Tests",
+      "requirements": [
+        "REQ-007",
+        "REQ-008"
+      ],
+      "sources": [
+        "S05"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "angepasst",
+      "reason": "Testtypen beschreiben; Tests erst zusammen mit tatsächlichen Funktionen.",
+      "alternative": "Leere unit/integration/contract-Bäume als Abdeckung darstellen.",
+      "target": "tests/README.md",
+      "practical_proof_needed": "Verhaltens- und Integrationstests im Entwicklungsauftrag ausführen."
+    },
+    {
+      "id": "A26",
+      "area": "src-Paketlayout",
+      "requirements": [
+        "REQ-001"
+      ],
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "evidence_kind": "direkt",
+      "decision": "behalten",
+      "reason": "Gemeinsame Python-Bibliothek von Apps trennen.",
+      "alternative": "Flaches Demo-Layout ist einfacher, weniger klar bei Paketverteilung.",
+      "target": "pyproject.toml",
+      "practical_proof_needed": "Paketimport jetzt; Wheel-Installation und Abhängigkeiten vor Release."
+    },
+    {
+      "id": "A27",
+      "area": "Browser-App",
+      "requirements": [
+        "REQ-002",
+        "REQ-009"
+      ],
+      "sources": [
+        "S03",
+        "S04"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "behalten",
+      "reason": "Vor Telefonie einen reproduzierbaren Browserablauf.",
+      "alternative": "Parallel mehrere Telefonieadapter entwickeln.",
+      "target": "apps/browser-demo/README.md",
+      "practical_proof_needed": "Migration und echtes Sprachgespräch noch erforderlich."
+    },
+    {
+      "id": "A28",
+      "area": "Kundenprojekt-Vorlage",
+      "requirements": [
+        "REQ-001",
+        "REQ-014"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "angepasst",
+      "reason": "Startvorlage benennt fehlende Core-Veröffentlichung und Konfigurationsstatus.",
+      "alternative": "Kompletten Core in jedes Repo kopieren.",
+      "target": "templates/customer-agent/README.md",
+      "practical_proof_needed": "Zweites isoliertes Profil nach Core-Release prüfen."
+    },
+    {
+      "id": "A29",
+      "area": "Beispiele",
+      "requirements": [
+        "REQ-001"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "angepasst",
+      "reason": "Ein gültiges bereinigtes Profil jetzt; lauffähige Agenten später.",
+      "alternative": "Leere Beispiele als nutzbare Voice-Agenten ausgeben.",
+      "target": "examples/basic-agent/agent.example.json",
+      "practical_proof_needed": "JSON prüfen; Runtime-Verhalten später."
+    },
+    {
+      "id": "A30",
+      "area": "Hilfsskripte",
+      "requirements": [
+        "REQ-012",
+        "REQ-016"
+      ],
+      "sources": [
+        "S02"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Projektintegrität ohne Cloud/API prüfen.",
+      "alternative": "Tests für nicht existierende Laufzeitfunktionen.",
+      "target": "scripts/validate_project.py",
+      "practical_proof_needed": "Prüfer auch mit absichtlich beschädigter Kopie testen."
+    },
+    {
+      "id": "A31",
+      "area": "Deployment",
+      "requirements": [
+        "REQ-013"
+      ],
+      "sources": [
+        "S09"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "später",
+      "reason": "Nach Browserreife passende Hosting-Konfiguration.",
+      "alternative": "Bestehendes Render ungefragt umbauen.",
+      "target": "deploy/README.md",
+      "practical_proof_needed": "Staging-Deploy und Rücknahme nachweisen."
+    },
+    {
+      "id": "A32",
+      "area": "Datenbankmigrationen",
+      "requirements": [
+        "REQ-005",
+        "REQ-013"
+      ],
+      "sources": [
+        "S06"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "später",
+      "reason": "Vor Schemaentscheidung nur Anforderungen, kein künstliches migrations-Verzeichnis.",
+      "alternative": "Dummy-Migrationen ohne Datenmodell.",
+      "target": "docs/security/memory-lifecycle.md",
+      "practical_proof_needed": "Migration und Restore auf Wegwerfdaten prüfen."
+    },
+    {
+      "id": "A33",
+      "area": "runtime-Modul",
+      "requirements": [
+        "REQ-008",
+        "REQ-009"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Lifecycle-Verantwortung dokumentieren, Implementierung im nächsten Auftrag.",
+      "alternative": "Aufgabenführung unklar über alle Module verteilen.",
+      "target": "src/activi_agent/runtime/README.md",
+      "practical_proof_needed": "Sessionabschluss, Fehler und verspätete Arbeit testen."
+    },
+    {
+      "id": "A34",
+      "area": "Observability-Modul",
+      "requirements": [
+        "REQ-009",
+        "REQ-011"
+      ],
+      "sources": [
+        "S08",
+        "S14"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "IDs, Zeiten und technische Ergebnisse ohne Secrets.",
+      "alternative": "SDK-Tracing ohne SDK als aktiv annehmen.",
+      "target": "src/activi_agent/observability/README.md",
+      "practical_proof_needed": "Erzeugung, Empfang und tatsächliches Playback unterscheiden."
+    },
+    {
+      "id": "A35",
+      "area": "Konfigurationsmodul",
+      "requirements": [
+        "REQ-014"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "jetzt",
+      "reason": "Beispielvertrag und getrennte Identitäten dokumentieren.",
+      "alternative": "Engine-ID als Authentifizierung nutzen.",
+      "target": "src/activi_agent/config/README.md",
+      "practical_proof_needed": "Ungültige Konfiguration vor Sessionstart künftig abweisen."
+    },
+    {
+      "id": "A36",
+      "area": "Prompts-Modul",
+      "requirements": [
+        "REQ-003",
+        "REQ-010"
+      ],
+      "sources": [
+        "S13"
+      ],
+      "evidence_kind": "direkt",
+      "decision": "jetzt",
+      "reason": "Kurze Voice-Bausteine; detaillierte Abläufe im Backend.",
+      "alternative": "Entwicklungs-AGENTS.md ins Sprachmodell laden.",
+      "target": "src/activi_agent/prompts/README.md",
+      "practical_proof_needed": "Smalltalk, Herkunft und bestätigte Aktionen gesprochen testen."
+    },
+    {
+      "id": "A37",
+      "area": "Memory-Modul",
+      "requirements": [
+        "REQ-005"
+      ],
+      "sources": [
+        "S06",
+        "S15"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "behalten",
+      "reason": "Gesprächskontext und dauerhafte Kundeninformationen separat.",
+      "alternative": "Alles ungeprüft dauerhaft merken.",
+      "target": "src/activi_agent/memory/README.md",
+      "practical_proof_needed": "Herkunft, Konflikte, TTL und Löschung testen."
+    },
+    {
+      "id": "A38",
+      "area": "Knowledge-Modul",
+      "requirements": [
+        "REQ-006"
+      ],
+      "sources": [
+        "S06"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "behalten",
+      "reason": "Freigegebene firmenspezifische Quellen, keine beliebige Recherche.",
+      "alternative": "Allgemeine Websuche als Firmenwissen behandeln.",
+      "target": "src/activi_agent/knowledge/README.md",
+      "practical_proof_needed": "Falsche Firma, fehlende Quelle und Dokument-Prompt-Injection testen."
+    },
+    {
+      "id": "A39",
+      "area": "Policies-Modul",
+      "requirements": [
+        "REQ-003",
+        "REQ-007"
+      ],
+      "sources": [
+        "S04",
+        "S07"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "behalten",
+      "reason": "Freundliche Rückführung und harte Aktionsgrenzen separat.",
+      "alternative": "Smalltalk als Policy-Verstoß werten.",
+      "target": "src/activi_agent/policies/README.md",
+      "practical_proof_needed": "Falsch positive Themenkontrolle und erlaubte Plauderei testen."
+    },
+    {
+      "id": "A40",
+      "area": "Connector-Modul",
+      "requirements": [
+        "REQ-007",
+        "REQ-013"
+      ],
+      "sources": [
+        "S03",
+        "S16"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "behalten",
+      "reason": "API/MCP/Webhook erst anhand des Dienstes wählen.",
+      "alternative": "Ein Protokoll für alle Audio- und Geschäftsfunktionen erzwingen.",
+      "target": "src/activi_agent/connectors/README.md",
+      "practical_proof_needed": "Auth, Timeout, Retry und Dienstvertrag praktisch testen."
+    },
+    {
+      "id": "A41",
+      "area": "Skills/Rollen/Engine-ID",
+      "requirements": [
+        "REQ-014",
+        "REQ-016"
+      ],
+      "sources": [
+        "S01"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "angepasst",
+      "reason": "Bestand inventarisieren; Engine-ID und virtuelle Agenten bleiben ungeklärt.",
+      "alternative": "Weitere Modelle oder Skill-Runtime erfinden.",
+      "target": "docs/skills.md",
+      "practical_proof_needed": "Begriffe vor abhängiger Implementierung klären."
+    },
+    {
+      "id": "A42",
+      "area": "OpenMined/Developer Plugin",
+      "requirements": [
+        "REQ-016"
+      ],
+      "sources": [
+        "S17"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "angepasst",
+      "reason": "Kein nachgewiesener OpenMined-Bedarf; OpenAI-Dokumentation direkt gelesen.",
+      "alternative": "Plugin-Installation ohne verfügbare Statusprüfung behaupten.",
+      "target": "docs/project/open-questions.md",
+      "practical_proof_needed": "Konkretes OpenMined-Produkt bei tatsächlichem Integrationsauftrag nennen."
+    },
+    {
+      "id": "A43",
+      "area": "Versionsupdates und Abhängigkeiten",
+      "requirements": [
+        "REQ-001",
+        "REQ-013"
+      ],
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "evidence_kind": "abgeleitet",
+      "decision": "angepasst",
+      "reason": "0.0.0 bleibt Skeleton; feste Kundenabhängigkeit erst nach geprüftem Release.",
+      "alternative": "Jetzt eine nicht existierende Paketversion installieren.",
+      "target": "docs/development/releases.md",
+      "practical_proof_needed": "Abhängigkeiten festlegen, Installation/Upgrade testen und Lizenzentscheidung treffen."
+    }
+  ]
+}

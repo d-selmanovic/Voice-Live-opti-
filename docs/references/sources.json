@@ -1,0 +1,138 @@
+[
+  {
+    "id": "S01",
+    "title": "OpenAI: AGENTS.md",
+    "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "checked_on": "2026-10-02",
+    "finding": "Entwicklungsanweisungen werden hierarchisch entdeckt; Zusatzdateien ausdrücklich referenzieren.",
+    "limitation": "aktuelle Dokumentation"
+  },
+  {
+    "id": "S02",
+    "title": "OpenAI Cookbook: PLANS.md",
+    "url": "https://developers.openai.com/cookbook/articles/codex_exec_plans",
+    "checked_on": "2026-10-02",
+    "finding": "Lebende Pläne für große Änderungen; Fortschritt, Entscheidungen, Erkenntnisse und Abnahme.",
+    "limitation": "archiviertes Beispiel; nur Planungsmuster, keine Modell-/API-Empfehlung"
+  },
+  {
+    "id": "S03",
+    "title": "OpenAI: GPT-Live Delegation",
+    "url": "https://developers.openai.com/api/docs/guides/live-delegation",
+    "checked_on": "2026-10-02",
+    "finding": "Responses für einfachen Einstieg; Client Delegation für eigene Workflows und Ergebnisprüfung.",
+    "limitation": "aktuelle Dokumentation"
+  },
+  {
+    "id": "S04",
+    "title": "OpenAI: Server controls",
+    "url": "https://developers.openai.com/api/docs/guides/voice-server-controls",
+    "checked_on": "2026-10-02",
+    "finding": "Audio- und Steuerverbindung unterscheiden; eine zuständige Stelle je Aktion; laufende Kontrollen.",
+    "limitation": "aktuelle Dokumentation"
+  },
+  {
+    "id": "S05",
+    "title": "OpenAI Cookbook: GPT-Live Evaluation",
+    "url": "https://developers.openai.com/cookbook/examples/audio/voice_agent_evaluation",
+    "checked_on": "2026-10-02",
+    "finding": "Sprachverhalten, Delegation, Tools und Endzustand gemeinsam messen; schrittweise Szenarien.",
+    "limitation": "Cookbook, GPT-Live-spezifisch"
+  },
+  {
+    "id": "S06",
+    "title": "OpenAI Cookbook: Kunden-Memory",
+    "url": "https://developers.openai.com/cookbook/examples/agents_sdk/context_personalization",
+    "checked_on": "2026-10-02",
+    "finding": "Gezielte Erinnerungen, Zusammenführung, Konfliktlösung und Vergessen.",
+    "limitation": "SDK-Beispiel, kein automatisch verfügbarer Dienst"
+  },
+  {
+    "id": "S07",
+    "title": "OpenAI: Guardrails",
+    "url": "https://developers.openai.com/api/docs/guides/agents/guardrails-approvals",
+    "checked_on": "2026-10-02",
+    "finding": "Aktionsprüfungen an Tool-Grenzen; Agentenprüfungen decken nicht jede Grenze ab.",
+    "limitation": "SDK-spezifisch; Prinzip auf eigene Executor-Implementierung übertragen"
+  },
+  {
+    "id": "S08",
+    "title": "OpenAI: Observability",
+    "url": "https://developers.openai.com/api/docs/guides/agents/integrations-observability",
+    "checked_on": "2026-10-02",
+    "finding": "SDK-Traces zeigen Modell- und Tool-Aufrufe; SDK-Verwendung vorausgesetzt.",
+    "limitation": "SDK-spezifisch"
+  },
+  {
+    "id": "S09",
+    "title": "OpenAI: Production",
+    "url": "https://developers.openai.com/api/docs/guides/production-best-practices",
+    "checked_on": "2026-10-02",
+    "finding": "Produktionsbetrieb gesondert planen; Zugang, Skalierung und Betrieb berücksichtigen.",
+    "limitation": "keine Garantie durch Ordnernamen"
+  },
+  {
+    "id": "S10",
+    "title": "Python Packaging: src layout",
+    "url": "https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/",
+    "checked_on": "2026-10-02",
+    "finding": "Paketcode von Repositorydateien trennen; Installation gesondert prüfen.",
+    "limitation": "Python Packaging Authority"
+  },
+  {
+    "id": "S11",
+    "title": "Python Packaging: pyproject",
+    "url": "https://packaging.python.org/en/latest/guides/writing-pyproject-toml/",
+    "checked_on": "2026-10-02",
+    "finding": "Paketmetadaten und Build-Konfiguration zentral beschreiben.",
+    "limitation": "Python Packaging Authority"
+  },
+  {
+    "id": "S12",
+    "title": "GitHub: Planung und Issues",
+    "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project",
+    "checked_on": "2026-10-02",
+    "finding": "Issues, Vorlagen und Aufgabenzerlegung werden dokumentiert.",
+    "limitation": "GitHub; keine Pflicht zur sofortigen Cloud-Nutzung"
+  },
+  {
+    "id": "S13",
+    "title": "OpenAI: GPT-Live Prompting",
+    "url": "https://developers.openai.com/api/docs/guides/live-prompting",
+    "checked_on": "2026-10-02",
+    "finding": "Kurze Gesprächsanweisungen; ausführliche Arbeitsabläufe im Backend.",
+    "limitation": "aktuelle Dokumentation"
+  },
+  {
+    "id": "S14",
+    "title": "OpenAI: Session Lifecycle",
+    "url": "https://developers.openai.com/api/docs/guides/live-conversations",
+    "checked_on": "2026-10-02",
+    "finding": "Transkript, Audiowiedergabe und Backendfortschritt getrennt verfolgen.",
+    "limitation": "aktuelle Dokumentation"
+  },
+  {
+    "id": "S15",
+    "title": "OpenAI Cookbook: Session Memory",
+    "url": "https://developers.openai.com/cookbook/examples/agents_sdk/session_memory",
+    "checked_on": "2026-10-02",
+    "finding": "Gesprächshistorie und Kontextmanagement; SDK-Nutzung erforderlich.",
+    "limitation": "nicht gleich dauerhafte Kunden-Memory"
+  },
+  {
+    "id": "S16",
+    "title": "OpenAI: Function Calling",
+    "url": "https://developers.openai.com/api/docs/guides/function-calling",
+    "checked_on": "2026-10-02",
+    "finding": "Tool-Aufrufe haben definierte Eingaben; Anwendung führt sie aus.",
+    "limitation": "Berechtigungen zusätzlich serverseitig"
+  },
+  {
+    "id": "S17",
+    "title": "OpenMined: Syft Hub",
+    "url": "https://syft-protocol.openmined.org/syft-sdk/",
+    "checked_on": "2026-10-02",
+    "finding": "Dezentrale Datenabfragen und föderierte Pipelines.",
+    "limitation": "nicht im Referenzcode integriert; keine Strukturvorgabe für unseren Core"
+  }
+]

@@ -1,16 +1,16 @@
 # Activi Agent Core
 
-Wiederverwendbare Basis für Voice-Agenten von Denis Selmanovic / activi.io.
+Wiederverwendbare Voice-Agentenbasis von Denis Selmanovic / activi.io.
 
-Status: Ordnerstruktur, Arbeitsregeln, Dokumentation und Kundenprojekt-Vorlage eingerichtet. Memory, Wissen, Tools, Telefonie und Browser-Demo sind in dieser Basis noch nicht implementiert. Die bestehende Demo wurde nicht verändert.
+Status: Projektorganisation und Quellenabgleich optimiert. Gemeinsame Voice-/Memory-/Tool-Funktionen sind noch nicht implementiert; die bestehende Demo wurde nicht migriert oder veröffentlicht.
 
-Start: AGENTS.md → docs/requirements.md → docs/architecture.md → docs/roadmap.md.
+Einstieg: [AGENTS.md](AGENTS.md), [Status](docs/status.md), [Struktur](docs/structure.md), [Anforderungen](docs/requirements.md), [Aufgaben](docs/issues.md).
 
-Gemeinsame Funktionen liegen in src/activi_agent/. Die Browser-Testanwendung gehört nach apps/browser-demo/. Für spätere Spezialagenten dient templates/customer-agent/ als Startvorlage. Echte Kundenprojekte bekommen eigene Repositories und geprüfte Basisversionen.
+[Einzelprüfung von 43 Bereichen](docs/audit/structure-review.md) trennt Bedarf, Quellenunterstützung, eigene Entscheidungen und verbleibende praktische Nachweise. [Quellen](docs/sources.md) umfassen offizielle OpenAI-, Python- und GitHub-Dokumentation.
 
-Ein einzelner modularer Server ist der geplante Anfang; separate Dienste oder ein zweiter KI-Agent sind noch nicht festgelegt.
+## Lokal prüfen
+Aus diesem Ordner mit Python 3.12+: `python3 scripts/validate_project.py`.
 
-## Lokale Prüfung
-`PYTHONPATH=src python -c "import activi_agent; print(activi_agent.__version__)"`
+Danach optional: `PYTHONPATH=src python3 -c 'import activi_agent; print(activi_agent.__version__)'`.
 
-Diese Prüfung importiert nur das Paketgrundgerüst; sie prüft keine Voice-Funktionen.
+Das prüft das Grundgerüst, nicht Audioqualität oder produktive Integrationen. Für zukünftige Funktionsentwicklung [Roadmap](docs/roadmap.md) und [Browserplan](apps/browser-demo/README.md) lesen.

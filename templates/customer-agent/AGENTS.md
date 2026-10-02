@@ -1,3 +1,3 @@
-# Kundenagent
+# Kundenagent — Arbeitsregeln
 
-Core-Arbeitsregeln und eigene dokumentierte Anforderungen beachten. Keine Kundendaten oder Secrets in Git. Berechtigungen, Smalltalk und Tools projektspezifisch konfigurieren. Core-Updates erst nach passenden Tests.
+Eigenen Zweck, tatsächlichen Status und Aufgaben dokumentieren. Core-Version explizit prüfen. Firmendaten und Memory getrennt, Secrets extern. Smalltalk erlauben; Toolrechte serverseitig erzwingen. Keine allgemeine Websuche ohne Freigabe. Prompt und Backend müssen dieselben bestätigten Fähigkeiten beschreiben. Herkunft Denis Selmanovic / activi.io korrekt nennen. Keine Runtime-AGENTS.md als Voice-Prompt laden.

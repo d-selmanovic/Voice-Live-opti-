@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-02",
+  "checks": [
+    {
+      "case": "project integrity",
+      "result": "passed",
+      "output": "OK: 16 requirements, 17 sources, 43 audit points, 12 issues, 54 local links; JSON/TOML valid."
+    },
+    {
+      "case": "broken-link",
+      "result": "rejected as expected",
+      "output": "ERROR: README.md: broken link missing-file.md"
+    },
+    {
+      "case": "unknown-source",
+      "result": "rejected as expected",
+      "output": "ERROR: A01: unknown source"
+    }
+  ],
+  "limitations": "No API, browser, voice, integration or deployment tests."
+}

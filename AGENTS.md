@@ -1,35 +1,32 @@
-# AGENTS.md – Activi Agent Core
+# Activi Agent Core – Arbeitsanweisungen
 
-## Ziel und Scope
-Wiederverwendbare technische Basis für Voice-Agenten. Diese Einrichtung ist ein Grundgerüst, noch kein funktionsfähiger neuer Voice-Agent. Kundenprojekte verwenden später festgelegte Basisversionen und eigene Repositories. Die bestehende Render-Demo ist Referenz; nicht ohne auftragsbezogene Freigabe umbauen oder veröffentlichen.
+## Ziel und aktueller Stand
+Wiederverwendbare technische Basis für kundenindividuelle Voice-Agenten von Denis Selmanovic / activi.io. Aktuell: Struktur, dokumentierte Entscheidungen und Offline-Prüfungen; noch kein migrierter Voice-Agent. Bestehende Render-Demo ist separate Referenz.
 
-## Verbindliche Produktentscheidungen
-- Zuerst Browsergespräche vollständig entwickeln und testen; danach Telefonie integrieren.
-- Smalltalk ist ausdrücklich erwünscht und muss möglich sein. Längeres Abschweifen freundlich zur Aufgabe zurückführen. Keine harten Themenblockaden für normale Plauderei.
-- Laufende Themenkontrolle ist die gewählte Richtung; keine verpflichtende Prüfung jeder Antwort vor Wiedergabe. Bereits hörbare Aussagen lassen sich nicht zurückholen.
-- Keine Fakten, Spielergebnisse, persönlichen Erlebnisse oder erfolgreich ausgeführten Aktionen erfinden.
-- Jeder Agent hat eigenes Firmenwissen, eigene Kunden-Memory, Tools und Berechtigungen. Die Basis stellt Funktionen bereit, keine gemeinsame Kunden-Memory.
-- Gesprächskontext, dauerhaftes Kundenwissen und Firmenwissen getrennt behandeln. Nur ausgewählte nachvollziehbare Informationen dauerhaft speichern.
-- Anwendung entwickelt von Denis Selmanovic von activi.io; OpenAI liefert gegebenenfalls KI-Modelle und API. Bei Fragen korrekt unterscheiden.
+## Einstieg und Pflichtlektüre
+Vor Arbeit [Status](docs/status.md), [Anforderungen](docs/requirements.md), [Tracker](docs/issues.md) und [Entwicklungsregeln](docs/development/rules.md) lesen. Relevante Architektur, Guides und Quellen gezielt hinzunehmen. [Strukturübersicht](docs/structure.md) ordnet alle Bereiche zu.
 
-## Technische Grenzen
-- Datenzugriffe nach Projekt/Firma und verifiziertem Kundenkontext im Backend begrenzen. Gesprochene IDs sind keine Autorisierung.
-- Tools nur über explizite Freigaben und serverseitige Validierung ausführen. Smalltalk erweitert keine Berechtigungen.
-- Keine allgemeine Websuche für spezialisierte Geschäftsagenten ohne ausdrückliche Konfiguration.
-- Änderungen mit Außenwirkung gegen doppelte Ausführung absichern. Erforderliche Kundenbestätigung im Workflow prüfen.
-- Buchungen und CRM-Änderungen erst nach bestätigtem Erfolg als erledigt melden.
-- Audiofluss von langsameren externen Aufgaben trennen; asynchrone Verarbeitung, Zeitlimits und Fehlerbehandlung vorsehen. Zusätzliche KI-Agenten nur bei begründetem Bedarf.
-- API, MCP oder Webhooks passend zum jeweiligen Dienst wählen; konkrete Anbindungen sind noch nicht implementiert.
-- Secrets, Gesprächsaufzeichnungen, Kunden-Memory und private Wissensdaten niemals in Git speichern.
+## Verbindliche Entscheidungen
+- Browser zuerst entwickeln und prüfen; Telefonie danach.
+- Smalltalk ist erwünscht. Längeres Abschweifen freundlich zurückführen; keine erfundenen Fakten oder eigenen Erlebnisse.
+- Laufende Kontrolle statt verpflichtender Audioprüfung vor Wiedergabe. Tool-/Datenrechte trotzdem serverseitig erzwingen.
+- Firma, Agent, Konfigurationsversion, Session und verifizierten Kundenkontext trennen. Eine ID ist keine Autorisierung.
+- Firmenwissen, Kunden-Memory und Gesprächskontext getrennt. Keine gemeinsam genutzten Kundenerinnerungen durch die Basis.
+- Werkzeuge explizit erlauben, Argumente prüfen, doppelte Aktionen verhindern und veraltete Ergebnisse verwerfen. Erforderliche Kundenbestätigung prüfen. Erfolg erst nach bestätigter Ausführung melden.
+- Allgemeine Websuche für spezialisierte Agenten nur bei ausdrücklicher Freigabe. Demo-Websuche nicht ungeprüft übernehmen.
+- Anwendung: Denis Selmanovic von activi.io; verwendete OpenAI-Modelle/API: OpenAI.
+- Secrets, private Memory, echte Kundendaten und Aufzeichnungen niemals in Git/Download aufnehmen.
 
-## Struktur und Arbeit
-- Gemeinsame Bibliothek: src/activi_agent/; Browser-Testanwendung: apps/browser-demo/.
-- Startvorlage: templates/customer-agent/; Beispiele: examples/; Architekturentscheidungen: docs/decisions/.
-- Kundenprojekte auf geprüfte Paketversionen festlegen; Updates ausdrücklich testen, nicht automatisch überall erzwingen.
-- Kleine nachvollziehbare Änderungen auf Entwicklungsbranches; passende Prüfungen durchführen und Ergebnisse ehrlich benennen.
-- Offizielle Dokumentation und OpenAI Cookbook bei OpenAI-Implementierungsfragen prüfen; aktuelle Fähigkeiten nicht aus alten Chat-Aussagen übernehmen.
-- Keine funktionierenden Adapter, Produktionsreife oder bestandenen Sprachtests behaupten, solange sie nicht nachgewiesen sind.
-- Anforderungen und Architekturentscheidungen mit Datum in docs/ aktualisieren.
-- Bestehende ZIP-Dateien sind historische Referenzen und kein Nachweis des neuesten Live-Codes.
-- Ein vorhandenes Backend bedeutet nicht automatisch einen zweiten KI-Agenten; vor solchen Aussagen Code prüfen.
-- Für den nächsten Entwicklungsauftrag README.md, docs/requirements.md und docs/roadmap.md lesen.
+## Arbeitsablauf
+Anforderung/Issue zuordnen; Ist-Stand prüfen; einfachste ausreichende Änderung durchführen; passende Prüfungen ausführen; Status und Nachweise pflegen. Fakten, Annahmen, Vorschläge und offene Tests unterscheiden. Quellen bestätigen Prinzipien, nicht jede Ordnerbenennung. Keine Produktionsreife oder erreichten Jeff-Werte ohne Nachweis behaupten.
+
+Für große Änderungen Plan nach [PLANS.md](PLANS.md) führen. Einziger lokaler Tracker: docs/issues.md. Architekturentscheidungen liegen in docs/decisions/. Kunde nutzt später feste geprüfte Core-Version; zusätzliche Agenten/Dienste nur mit begründetem Nutzen.
+
+Bei wesentlichen Unklarheiten eigene zugängliche Quellen zuerst prüfen, dann gezielt fragen. [Offene Fragen](docs/project/open-questions.md) nennen abhängige Phasen. Nicht erneut nach bereits erteilter Freigabe fragen. Eigenständige reversible Arbeiten innerhalb des Auftrags abschließen.
+
+## Prüfbefehle aus dem Projektroot
+- `python3 scripts/validate_project.py` — Offline-Konsistenz.
+- `PYTHONPATH=src python3 -c 'import activi_agent; print(activi_agent.__version__)'` — nur Paketimport.
+- `git diff --check` — Formatfehler im Diff.
+
+Ein Voice-Startbefehl existiert noch nicht. Bereichsanweisungen: Backend, Frontend und evals besitzen eigene AGENTS.md; bei Änderungen dort ausdrücklich lesen. [Definition of done](docs/development/definition-of-done.md) beachten. Aktuelle API-Dokumentation vor Implementierung prüfen, archivierte Beispiele nicht als aktuelle API übernehmen.
